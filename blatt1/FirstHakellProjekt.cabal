@@ -1,0 +1,65 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 039902e7de77fc92a9f486bfd9bfa18efc5e07bb9e23b68c31ef397ac483ad5b
+
+name:           FirstHakellProjekt
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/FirstHakellProjekt#readme>
+homepage:       https://github.com/githubuser/FirstHakellProjekt#readme
+bug-reports:    https://github.com/githubuser/FirstHakellProjekt/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/FirstHakellProjekt
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_FirstHakellProjekt
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable FirstHakellProjekt-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_FirstHakellProjekt
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      FirstHakellProjekt
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite FirstHakellProjekt-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      LibSpec
+      Paths_FirstHakellProjekt
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      FirstHakellProjekt
+    , QuickCheck
+    , base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
